@@ -23,7 +23,7 @@ export const Padre = () => {
 
 
     return (
-        <div>
+        <div> 
             <h1>Padre</h1>
             <p> Total: { valor } </p>
 
