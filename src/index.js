@@ -13,13 +13,14 @@ import ReactDOM from 'react-dom/client';
 // import { HookMemo } from './components/06-memo/HookMemo';
 // import { UseCallback } from './components/06-memo/UseCallback';
 // import { Padre } from './components/07-tarea-memo/Padre';
-import { TodoApp } from './components/08-useReduce/TodoApp';
+// import { TodoApp } from './components/08-useReduce/TodoApp';
+import { MainApp } from './components/09-useContext/MainApp';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-    <TodoApp />
+    <MainApp />
 
 );
 
