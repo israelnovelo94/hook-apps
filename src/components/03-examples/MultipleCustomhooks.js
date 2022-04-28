@@ -9,9 +9,11 @@ export const MultipleCustomhooks = () => {
     const url = `https://www.breakingbadapi.com/api/quotes/${counter}`;
     // Hook del useFetch para validar la url que traera la data, desestructuramos el loading y la data
     const {loading,data} = useFetch(url);
-
+    
     //  Si la DATA trae informacion la extraemos
-    const {author, quote} = !!data && data[0];
+     const {author, quote} = !!data && data[0];
+        console.log(data);
+
   return (
     <div>
         <h1>BreakingBad Quotes</h1>
