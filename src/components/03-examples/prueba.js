@@ -6,18 +6,47 @@ export const MultipleCustomhooks = () => {
 
     // Hook contador que se usara para cambiar la url y traer diferentes quotes
     const {counter, increment, decrement} = useCounter(1);
-    const url = `https://www.breakingbadapi.com/api/quotes/${counter}`;
+    // const url = `https://www.breakingbadapi.com/api/quotes/${counter}`;
+    const url = 'http://10.9.15.20:4000/api/historial/'
     // Hook del useFetch para validar la url que traera la data, desestructuramos el loading y la data
-    const {loading,data} = useFetch(url);
+    const {data} = useFetch(url);
     
     //  Si la DATA trae informacion la extraemos
-     const {author, quote} = !!data && data[0];
-        console.log(data);
+      const {resHistorial} = !!data && data;
+
+    //   const {id} = !!resHistorial && resHistorial;
+
+       console.log(resHistorial);
+      if (resHistorial) {
+        let cont = 7;
+        while (cont < resHistorial.length) {
+
+            console.log(resHistorial[cont]);
+            const {id, Dependencia, Nivele, Puesto} = resHistorial[cont];
+
+            const {Descripcion} = Dependencia;
+            const {Nivel} = Nivele;
+            const {Descripcion:desPuesto} = Puesto;
+            console.log("ID:", id, "Dependencia: ",Descripcion, "Nivel: ",Nivel, "Puesto: ",desPuesto);
+            
+            
+            cont++;
+        }
+          
+      }
+
+      
+
+         
+
+
+
+        
 
   return (
     <div>
         <h1>BreakingBad Quotes</h1>
-        {
+        {/* {
             loading
             ?
                 (
@@ -32,7 +61,7 @@ export const MultipleCustomhooks = () => {
                         <footer className='blockquote-footer'>{ author }</footer>
                     </blockquote>
                 )
-        }
+        } */}
             <button className='btn btn-primary' onClick={decrement}>
                 Anterior Quote
             </button>

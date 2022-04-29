@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { MultipleCustomhooks } from './components/03-examples/MultipleCustomhooks';
 // import { Hookapp } from './Hookapp';
 // import { CounterWithCustomHook } from './components/01 useState/CounterWithCustomHook';
 // import { CounterApp } from './components/01 useState/CounterApp';
@@ -14,13 +15,13 @@ import ReactDOM from 'react-dom/client';
 // import { UseCallback } from './components/06-memo/UseCallback';
 // import { Padre } from './components/07-tarea-memo/Padre';
 // import { TodoApp } from './components/08-useReduce/TodoApp';
-import { MainApp } from './components/09-useContext/MainApp';
+// import { MainApp } from './components/09-useContext/MainApp';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-    <MainApp />
+    <MultipleCustomhooks />
 
 );
 
